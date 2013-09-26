@@ -25,15 +25,17 @@ int _tmain(int argc, _TCHAR* argv[])
 	int nbwidth=bwidth-4;	//width of nested border
 	int c1w=5;				//width of column 1
 //variables for i/o and calculations
-	double change;
-
+	double	change;
+	int fifties, tens, ones, quarters, nickels, pennies;
 
 //input
 	cout	<< "How much change (in a dollars) needs to be given to the customer? ";
 	cin		>> change;
 
 //calculations
-
+	fifties=change/50;
+	tens=(change-50*fifties)/10;
+	ones=change-50*fifties-10*tens;
 	
 //output
 	cout	<< tl << setw(bwidth) << setfill(h) << tr << endl												//line1 top border
